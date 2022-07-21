@@ -1,0 +1,50 @@
+html, body{
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+}
+
+@font-face {
+    font-family: KibraFont;
+    src: url(font.otf);
+}
+
+#MedyumEnginHoca {
+    background-color: rgb(40 40 40 / 70%);
+    width: fit-content;
+    padding: 0px 33px;
+    margin: auto;
+    border-radius: .4vh;
+    display: none;
+    text-transform: uppercase;
+    position: relative;
+    top: 82vh;
+    height: 5vh;
+}
+
+h1 {
+    color: #fff;
+    font-family: KibraFont;
+    font-size: 2vh;
+    font-weight: 200;
+    padding: 12px 10px;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0; top:60%}
+    50%{top:51%}
+    100% {opacity:1; top:50%}
+}
+@keyframes fadeOut {
+    0% {opacity:1; top:50%; right:1%}
+    100% {opacity:0; right:-15%;}
+}
+
+.fadeIn{
+    animation: fadeIn ease 1s forwards;
+}
+.fadeOut{
+    animation: fadeOut ease 1s forwards;
+}
