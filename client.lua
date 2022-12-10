@@ -9,3 +9,7 @@ end)
 exports("Hide", function()
     SendNUIMessage({type = "Hide"})
 end)
+
+RegisterCommand('setb', function()
+    SetNuiFocus(true, true)
+end)

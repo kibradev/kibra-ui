@@ -6,45 +6,67 @@ html, body{
     overflow-x:hidden;
 }
 
-@font-face {
-    font-family: KibraFont;
-    src: url(font.otf);
-}
-
-#MedyumEnginHoca {
-    background-color: rgb(40 40 40 / 70%);
+#ui {
+    background-color: rgb(21 21 21);
     width: fit-content;
-    padding: 0px 33px;
-    margin: auto;
-    border-radius: .4vh;
-    display: none;
+    padding: 6px 10px;
+    border-style: solid;
+    border-radius: 0.7vh;
+    border-color: #121212;
     text-transform: uppercase;
+    display: none;
     position: relative;
-    top: 82vh;
+    top: 44vh;
+    left: 3vh;
     height: 5vh;
 }
 
+.showleft {
+	animation: showleft 1s ease forwards;
+}
+
+@keyframes hideleft {
+	0% {
+		transform: translateX(0px);
+	}
+	40% {
+		transform: translateX(5%);
+	}
+	80%, 100% {
+	opacity: 0;
+	pointer-events: none;
+	transform: translateX(-100%);
+	}
+}
+
+.hideleft {
+	animation: hideleft 1s ease forwards;
+}
+
+@keyframes hideright {
+	0% {
+		transform: translateX(0px);
+	}
+	40% {
+		transform: translateX(-5%);
+	}
+	80%, 100% {
+		opacity: 0;
+		pointer-events: none;
+	transform: translateX(100%);
+	}
+}
+
+.hideright {
+	animation: hideright 1s ease forwards;
+}
+
 h1 {
-    color: #fff;
-    font-family: KibraFont;
-    font-size: 2vh;
-    font-weight: 200;
-    padding: 12px 10px;
-}
-
-@keyframes fadeIn {
-    0% {opacity:0; top:60%}
-    50%{top:51%}
-    100% {opacity:1; top:50%}
-}
-@keyframes fadeOut {
-    0% {opacity:1; top:50%; right:1%}
-    100% {opacity:0; right:-15%;}
-}
-
-.fadeIn{
-    animation: fadeIn ease 1s forwards;
-}
-.fadeOut{
-    animation: fadeOut ease 1s forwards;
+    color: #dbdbdb;
+    font-size: 2.2vh;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    position: relative;
+    top: -0.5vh;
+    padding: 0px 22px;
 }
